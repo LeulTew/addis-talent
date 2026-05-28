@@ -505,7 +505,7 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
                 }`}
               >
                 {stat.icon}
-                <h3 className="text-3xl md:text-4xl font-sans font-extrabold text-brand-primary tracking-tight leading-none mb-1.5">
+                <h3 className="text-3xl md:text-4xl font-accent font-extrabold text-brand-primary tracking-tight leading-none mb-1.5">
                   <AnimatedCounter value={stat.value} />
                 </h3>
                 <p className="text-brand-primary/45 font-sans font-bold text-[9.5px] tracking-wider uppercase leading-none mt-1.5">{stat.label}</p>
@@ -611,7 +611,7 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
                     className="grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-6 bg-cream/10 p-8 border border-sand-border hover:border-brand-primary transition-premium group"
                   >
                     <div className="flex flex-row sm:flex-col items-center justify-between sm:justify-start gap-4">
-                      <div className="font-display font-black text-3xl text-brand-secondary/30 group-hover:text-brand-secondary transition-colors duration-300 leading-none">
+                      <div className="font-accent font-black text-3xl text-brand-secondary/30 group-hover:text-brand-secondary transition-colors duration-300 leading-none">
                         {item.num}
                       </div>
                       {svgIcons[item.num]}

@@ -158,7 +158,7 @@ export default function HireTalent({ setCurrentPage }: { setCurrentPage: (page: 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {steps.map((step) => (
                 <div key={step.idx} className="group relative bg-white/5 p-8 border border-white/10 hover:border-brand-secondary transition-all duration-350 flex flex-col justify-between">
-                  <span className="text-[60px] font-display font-black text-white/5 absolute top-1 right-6 pointer-events-none group-hover:text-brand-secondary/15 transition-colors duration-300 tracking-tighter">
+                  <span className="text-[60px] font-accent font-black text-white/5 absolute top-1 right-6 pointer-events-none group-hover:text-brand-secondary/15 transition-colors duration-300 tracking-tighter">
                     {step.idx}
                   </span>
                   <div className="relative z-10 mt-6">

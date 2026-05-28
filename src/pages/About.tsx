@@ -191,7 +191,7 @@ export default function About() {
               
               <div className="absolute bottom-6 right-6 bg-white border border-sand-border-strong p-6 flex items-center justify-between min-w-[200px] rounded-xl shadow-xs z-10">
                 <div>
-                  <h4 className="font-display font-black text-2xl tracking-tight text-brand-primary">8+ Years</h4>
+                  <h4 className="font-accent font-black text-2xl tracking-tight text-brand-primary">8+ Years</h4>
                   <p className="text-brand-primary/45 font-bold tracking-widest uppercase mt-0.5">Operational Excellence</p>
                 </div>
                 <div className="w-8 h-8 border border-sand-border flex items-center justify-center text-brand-secondary rounded-lg">
