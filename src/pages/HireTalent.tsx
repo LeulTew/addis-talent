@@ -53,77 +53,126 @@ export default function HireTalent({ setCurrentPage }: { setCurrentPage: (page: 
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services & Inquiry Form Section */}
       <section className="py-24 bg-cream relative overflow-hidden border-b border-sand-border">
         <SectionDecoration variant="primary" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { 
-                title: 'Recruitment', 
-                desc: 'Sourcing candidates based on actual role requirements.',
-                icon: (
-                  <svg className="w-8 h-8 text-brand-secondary group-hover:text-white transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M24 24L8 14M24 24L40 14M24 24L12 38M24 24L36 38" strokeLinecap="round" />
-                    <circle cx="24" cy="24" r="5" stroke="currentColor" strokeWidth="1.5" />
-                    <circle cx="8" cy="14" r="3" stroke="currentColor" strokeWidth="1.5" />
-                    <circle cx="40" cy="14" r="3" stroke="currentColor" strokeWidth="1.5" />
-                    <circle cx="12" cy="38" r="3" stroke="currentColor" strokeWidth="1.5" />
-                    <circle cx="36" cy="38" r="3" stroke="currentColor" strokeWidth="1.5" />
-                  </svg>
-                )
-              },
-              { 
-                title: 'Assessment', 
-                desc: 'Filtering for communication, capability, and fit.',
-                icon: (
-                  <svg className="w-8 h-8 text-brand-secondary group-hover:text-white transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <rect x="8" y="8" width="32" height="32" rx="4" />
-                    <path d="M16 20h16M16 28h10" strokeLinecap="round" />
-                    <circle cx="32" cy="28" r="3" stroke="currentColor" strokeWidth="1.5" />
-                    <path d="M30.5 28l1 1 2-2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                )
-              },
-              { 
-                title: 'Readiness', 
-                desc: 'Improving quality before placement with coaching.',
-                icon: (
-                  <svg className="w-8 h-8 text-brand-secondary group-hover:text-white transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M8 40c0-10 12-18 24-18M32 22h8v8" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M32 10l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                )
-              },
-              { 
-                title: 'Support', 
-                desc: 'Pipelining support for high-volume hiring needs.',
-                icon: (
-                  <svg className="w-8 h-8 text-brand-secondary group-hover:text-white transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M12 28h8l6-6-6-6h-8a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4z" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M36 28h-8l-6-6 6-6h8a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4z" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="24" cy="22" r="3" stroke="currentColor" strokeWidth="1.5" />
-                  </svg>
-                )
-              }
-            ].map((service, i) => (
-              <motion.div 
-                key={service.title}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05, duration: 0.4 }}
-                viewport={{ once: true }}
-                className="bg-white p-10 border border-sand-border group hover:bg-brand-primary transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-12 h-12 border border-brand-secondary/35 flex items-center justify-center mb-8 text-brand-secondary group-hover:bg-brand-secondary group-hover:border-brand-secondary group-hover:text-white transition-colors duration-300">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-display font-black text-brand-primary mb-4 tracking-tight group-hover:text-white transition-colors duration-300 uppercase">{service.title}</h3>
-                  <p className="text-brand-primary/60 text-sm leading-relaxed group-hover:text-white/70 font-sans font-medium transition-colors duration-300">{service.desc}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            {/* Left Column: What We Help With */}
+            <div className="lg:col-span-7 space-y-8">
+              <div>
+                <span className="text-[10px] font-display font-bold text-brand-secondary tracking-[0.25em] uppercase mb-4 inline-block">WHAT WE HELP WITH</span>
+                <h2 className="text-3xl md:text-4xl font-display font-black text-brand-primary uppercase">Services</h2>
+              </div>
+              
+              <div className="space-y-4">
+                {[
+                  { 
+                    title: 'Recruitment', 
+                    desc: 'Sourcing candidates based on actual role requirements.',
+                    icon: (
+                      <svg className="w-6 h-6 text-brand-secondary group-hover:text-white transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M24 24L8 14M24 24L40 14M24 24L12 38M24 24L36 38" strokeLinecap="round" />
+                        <circle cx="24" cy="24" r="5" stroke="currentColor" strokeWidth="1.5" />
+                        <circle cx="8" cy="14" r="3" stroke="currentColor" strokeWidth="1.5" />
+                        <circle cx="40" cy="14" r="3" stroke="currentColor" strokeWidth="1.5" />
+                        <circle cx="12" cy="38" r="3" stroke="currentColor" strokeWidth="1.5" />
+                        <circle cx="36" cy="38" r="3" stroke="currentColor" strokeWidth="1.5" />
+                      </svg>
+                    )
+                  },
+                  { 
+                    title: 'Screening and Assessment', 
+                    desc: 'Filtering for communication, capability, and fit.',
+                    icon: (
+                      <svg className="w-6 h-6 text-brand-secondary group-hover:text-white transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <rect x="8" y="8" width="32" height="32" rx="4" />
+                        <path d="M16 20h16M16 28h10" strokeLinecap="round" />
+                        <circle cx="32" cy="28" r="3" stroke="currentColor" strokeWidth="1.5" />
+                        <path d="M30.5 28l1 1 2-2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    )
+                  },
+                  { 
+                    title: 'Training and Readiness', 
+                    desc: 'Improving quality before placement with coaching.',
+                    icon: (
+                      <svg className="w-6 h-6 text-brand-secondary group-hover:text-white transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M8 40c0-10 12-18 24-18M32 22h8v8" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M32 10l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    )
+                  },
+                  { 
+                    title: 'Ongoing Talent Pipeline Support', 
+                    desc: 'Pipelining support for high-volume hiring needs.',
+                    icon: (
+                      <svg className="w-6 h-6 text-brand-secondary group-hover:text-white transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M12 28h8l6-6-6-6h-8a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4z" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M36 28h-8l-6-6 6-6h8a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4z" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="24" cy="22" r="3" stroke="currentColor" strokeWidth="1.5" />
+                      </svg>
+                    )
+                  }
+                ].map((service, i) => (
+                  <motion.div 
+                    key={service.title}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.05, duration: 0.4 }}
+                    viewport={{ once: true }}
+                    className="bg-white p-6 border border-sand-border hover:border-brand-primary flex items-start gap-5 transition-premium group"
+                  >
+                    <div className="w-12 h-12 border border-sand-border bg-white text-brand-secondary flex items-center justify-center shrink-0 group-hover:bg-brand-secondary group-hover:border-brand-secondary group-hover:text-white transition-colors duration-300">
+                      {service.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-[15px] font-display font-black text-brand-primary mb-1.5 uppercase group-hover:text-brand-secondary transition-colors duration-300">{service.title}</h3>
+                      <p className="text-brand-primary/60 text-xs leading-relaxed font-sans font-medium">{service.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Column: Tell Us What You Need Form */}
+            <div className="lg:col-span-5 bg-white border border-sand-border p-8 md:p-10 shadow-xs hover:border-brand-primary transition-premium">
+              <h3 className="text-lg font-display font-black text-brand-primary mb-6 tracking-tight uppercase border-b border-sand-border pb-3">Tell Us What You Need</h3>
+              
+              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+                <div className="space-y-1.5">
+                  <label className="text-[9px] font-display font-bold uppercase tracking-widest text-brand-primary/45 px-0.5">Full Name</label>
+                  <input 
+                    type="text" 
+                    placeholder="Hana Tesfaye" 
+                    className="w-full bg-cream/10 border border-sand-border rounded-none px-4 py-3 text-xs font-sans font-semibold focus:border-brand-secondary focus:outline-none transition-all placeholder:text-brand-primary/25 text-brand-primary" 
+                  />
                 </div>
-              </motion.div>
-            ))}
+                <div className="space-y-1.5">
+                  <label className="text-[9px] font-display font-bold uppercase tracking-widest text-brand-primary/45 px-0.5">Work Email</label>
+                  <input 
+                    type="email" 
+                    placeholder="hana@company.com" 
+                    className="w-full bg-cream/10 border border-sand-border rounded-none px-4 py-3 text-xs font-sans font-semibold focus:border-brand-secondary focus:outline-none transition-all placeholder:text-brand-primary/25 text-brand-primary" 
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <label className="text-[9px] font-display font-bold uppercase tracking-widest text-brand-primary/45 px-0.5">Message</label>
+                  <textarea 
+                    rows={4} 
+                    placeholder="Describe your talent requirements..." 
+                    className="w-full bg-cream/10 border border-sand-border rounded-none px-4 py-3 text-xs font-sans font-semibold focus:border-brand-secondary focus:outline-none transition-all placeholder:text-brand-primary/25 text-brand-primary resize-none" 
+                  />
+                </div>
+                <button className="w-full bg-brand-primary hover:bg-brand-secondary text-white py-3.5 px-6 rounded-none font-display font-bold text-[10px] tracking-widest uppercase transition-premium flex items-center justify-center gap-2 border border-brand-primary hover:border-brand-secondary cursor-pointer">
+                  SUBMIT INQUIRY
+                  <svg className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>

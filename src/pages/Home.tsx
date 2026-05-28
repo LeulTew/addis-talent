@@ -303,6 +303,18 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
         </svg>
       )
     },
+    { 
+      label: 'Global Partners', 
+      value: '200+',
+      icon: (
+        <svg className="w-5 h-5 text-brand-secondary mb-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+      )
+    },
   ];
 
   return (
@@ -490,18 +502,14 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
           className="absolute top-full left-1/2 w-full max-w-6xl px-6 z-20"
           style={{ transform: 'translate(-50%, -5%)' }}
         >
-          <div className="grid grid-cols-2 lg:grid-cols-4 bg-white border border-sand-border-strong rounded-2xl overflow-hidden shadow-none">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 bg-white border border-sand-border-strong rounded-2xl overflow-hidden shadow-none">
             {stats.map((stat, idx) => (
               <div 
                 key={stat.label} 
-                className={`flex flex-col items-center text-center py-10 px-4 relative ${
-                  idx === 0 
-                    ? 'border-r border-b border-sand-border/60 lg:border-b-0' 
-                    : idx === 1 
-                      ? 'border-b border-sand-border/60 lg:border-r lg:border-b-0' 
-                      : idx === 2 
-                        ? 'border-r border-sand-border/60 lg:border-b-0' 
-                        : ''
+                className={`flex flex-col items-center text-center py-10 px-4 relative border-b border-sand-border/60 ${
+                  idx % 2 !== 1 ? 'border-r' : 'md:border-r'
+                } ${
+                  idx === 4 ? 'lg:border-r-0' : 'lg:border-r'
                 }`}
               >
                 {stat.icon}
@@ -515,20 +523,13 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
         </div>
       </section>
 
-      {/* Corporate Ticker Section */}
-      <section className="pt-40 lg:pt-44 pb-16 bg-brand-primary relative overflow-hidden">
+      {/* Corporate Banner Section */}
+      <section className="pt-40 lg:pt-44 pb-16 bg-brand-secondary text-black relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 invert pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <p className="text-[9px] font-display font-bold tracking-[0.25em] text-white/40 uppercase mb-8">
-            Built through real delivery and market demand
+          <p className="text-sm md:text-base font-display font-black tracking-widest uppercase italic leading-relaxed text-brand-primary">
+            BUILT THROUGH REAL DELIVERY, REAL TEAMS, AND REAL MARKET DEMAND.
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 hover:opacity-95 transition-opacity duration-300">
-            {['GLOBAL HUB', 'TECH ADDIS', 'ETHIO VENTURES', 'BEYOND', 'PARTNERS'].map((name) => (
-              <span key={name} className="text-base font-display font-black tracking-[0.18em] text-white">
-                {name}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
  
