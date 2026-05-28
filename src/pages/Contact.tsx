@@ -77,7 +77,7 @@ export default function Contact() {
                     )
                   }
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-4 transition-premium hover:translate-x-1 group">
+                  <div key={idx} className="flex items-start gap-4 transition-all transform hover:translate-x-1 duration-300 group">
                     <div className="w-10 h-10 border border-sand-border bg-white text-brand-secondary flex items-center justify-center shrink-0 group-hover:bg-brand-secondary group-hover:border-brand-secondary group-hover:text-white transition-colors duration-300">
                       {item.icon}
                     </div>

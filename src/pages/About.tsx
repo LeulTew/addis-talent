@@ -99,12 +99,11 @@ export default function About() {
                 A dedicated recruitment, readiness, and placement platform created to help talent step into real opportunity.
               </p>
             </div>
-            {/* Right Column: about-story-photo.png */}
             <div className="hidden lg:block lg:col-span-5 relative h-[350px] self-end mt-auto">
               <div className="relative w-full h-[320px] flex items-end justify-center bg-transparent">
                 <FallbackImage 
                   src="/assets/about-story-photo.webp" 
-                  alt="MMCY Collaboration" 
+                  alt="Addis Talent Collaboration" 
                   className="max-w-full max-h-full object-contain object-bottom relative z-10"
                   fallback={<AboutCollaborationSVG />}
                 />
@@ -153,8 +152,8 @@ export default function About() {
               <div className="relative z-10">
                 <div className="w-12 h-12 border border-white/10 flex items-center justify-center mb-8 text-brand-secondary">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-                    <circle cx="12" cy="12" r="3" />
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                    <polyline points="17 6 23 6 23 12" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-display font-black text-white mb-4 tracking-tight uppercase">Our Vision</h3>
@@ -183,7 +182,7 @@ export default function About() {
               <div className="relative w-full h-full overflow-hidden">
                 <FallbackImage 
                   src="/assets/about-collaboration-habesha.webp" 
-                  alt="MMCY Workspace Collaboration Habesha" 
+                  alt="Addis Talent Workspace Collaboration Habesha" 
                   className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                   fallback={<AboutCollaborationSVG />}
                 />
@@ -223,6 +222,56 @@ export default function About() {
               </div>
             </div>
           </div>
+
+          {/* Why Addis Talent Exists & Real Systems Block */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mt-20 bg-brand-primary text-white border border-brand-primary p-8 md:p-12 relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+              {/* Left Column: Why Addis Talent Exists */}
+              <div className="space-y-6 flex flex-col justify-between">
+                <div>
+                  <div className="inline-flex items-center gap-3 text-brand-secondary text-[10px] font-display font-bold uppercase tracking-[0.25em] mb-2">
+                    <div className="w-6 h-0.5 bg-brand-secondary" />
+                    Our Purpose
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-display font-black tracking-tight uppercase leading-none">
+                    WHY ADDIS TALENT EXISTS
+                  </h3>
+                  <p className="text-white/60 text-[13px] md:text-sm font-sans font-medium leading-relaxed mt-4">
+                    There is no shortage of potential. The real gap is readiness, access, and connection. Employers need people who are screened, prepared, and ready to contribute. Talent needs structured pathways into real work.
+                  </p>
+                </div>
+                <div className="text-brand-secondary text-xs font-display font-bold uppercase tracking-wider mt-4">
+                  Addis Talent exists to help close that gap.
+                </div>
+              </div>
+
+              {/* Right Column: Real Systems & Delivery */}
+              <div className="space-y-6 border-t md:border-t-0 md:border-l border-white/10 pt-8 md:pt-0 md:pl-12 lg:pl-16 flex flex-col justify-between">
+                <div>
+                  <div className="inline-flex items-center gap-3 text-brand-secondary text-[10px] font-display font-bold uppercase tracking-[0.25em] mb-2">
+                    <div className="w-6 h-0.5 bg-brand-secondary" />
+                    Our Core
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-display font-black tracking-tight uppercase leading-none">
+                    REAL SYSTEMS. REAL DELIVERY.
+                  </h3>
+                  <p className="text-white/60 text-[13px] md:text-sm font-sans font-medium leading-relaxed mt-4">
+                    Addis Talent is built on years of recruitment, training, and placement experience. It is being shaped from real systems, real delivery, and real understanding of what employers and talent need to succeed.
+                  </p>
+                </div>
+                <div className="text-white/40 text-xs font-display uppercase tracking-wider mt-4">
+                  Ready to move forward.
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

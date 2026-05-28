@@ -172,6 +172,95 @@ export default function HireTalent({ setCurrentPage }: { setCurrentPage: (page: 
         </div>
       </section>
 
+      {/* Tell Us What You Need Form Section */}
+      <section className="py-24 bg-cream/30 relative overflow-hidden border-b border-sand-border">
+        <div className="absolute inset-0 bg-dot-pattern opacity-10 pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            {/* Left Column: Info */}
+            <div className="lg:col-span-5 space-y-6">
+              <div className="inline-flex items-center gap-3 text-brand-secondary text-[10px] font-display font-bold uppercase tracking-[0.25em]">
+                <div className="w-6 h-0.5 bg-brand-secondary" />
+                Let's Partner
+              </div>
+              <h2 className="text-4xl font-display font-black text-brand-primary leading-[1.1] tracking-tight uppercase">
+                TELL US WHAT YOU NEED.
+              </h2>
+              <p className="text-brand-primary/70 text-sm leading-relaxed font-sans font-medium">
+                Whether you are hiring at volume or looking for more targeted support, we'd love to understand your talent needs.
+              </p>
+              
+              <div className="border-t border-sand-border-strong pt-6 space-y-4">
+                <h4 className="text-xs font-display font-bold text-brand-primary uppercase tracking-wider">
+                  Build stronger teams with ready talent.
+                </h4>
+                <p className="text-brand-primary/60 text-xs font-sans font-semibold leading-relaxed">
+                  Addis Talent helps employers access professionals who are screened, prepared, and aligned to real business needs.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {['SCREENED', 'PREPARED', 'ALIGNED'].map(badge => (
+                    <span key={badge} className="px-3 py-1 bg-brand-primary/5 text-brand-primary font-display font-bold text-[9px] tracking-wider uppercase border border-sand-border-strong">
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Form */}
+            <div className="lg:col-span-7 bg-white p-8 md:p-10 border border-sand-border-strong relative">
+              <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-[10px] font-display font-black text-brand-primary uppercase tracking-widest mb-2">
+                      Full Name
+                    </label>
+                    <input 
+                      type="text" 
+                      placeholder="e.g. Samuel Ayele"
+                      className="w-full bg-cream/40 border border-sand-border-strong focus:border-brand-primary p-4 text-[13px] font-sans font-semibold rounded-none focus:outline-none transition-premium placeholder-brand-primary/30"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] font-display font-black text-brand-primary uppercase tracking-widest mb-2">
+                      Work Email
+                    </label>
+                    <input 
+                      type="email" 
+                      placeholder="name@company.com"
+                      className="w-full bg-cream/40 border border-sand-border-strong focus:border-brand-primary p-4 text-[13px] font-sans font-semibold rounded-none focus:outline-none transition-premium placeholder-brand-primary/30"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-[10px] font-display font-black text-brand-primary uppercase tracking-widest mb-2">
+                    Tell us about your talent requirements
+                  </label>
+                  <textarea 
+                    rows={4}
+                    placeholder="Describe the roles, scale, or skills you are looking for..."
+                    className="w-full bg-cream/40 border border-sand-border-strong focus:border-brand-primary p-4 text-[13px] font-sans font-semibold rounded-none focus:outline-none transition-premium placeholder-brand-primary/30 resize-none"
+                    required
+                  />
+                </div>
+                <button 
+                  type="submit"
+                  className="w-full bg-brand-primary hover:bg-brand-secondary text-white py-4 px-8 text-[11px] font-display font-bold tracking-widest uppercase transition-premium border border-brand-primary hover:border-brand-secondary cursor-pointer rounded-none flex items-center justify-center gap-2"
+                >
+                  SUBMIT INQUIRY
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Industries Section */}
       <section className="py-32 bg-white relative overflow-hidden border-b border-sand-border">
         <div className="absolute inset-0 bg-dot-pattern opacity-10 pointer-events-none" />

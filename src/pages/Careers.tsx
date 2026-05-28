@@ -90,9 +90,33 @@ export default function Careers() {
           >
             Find your <br /><span className="text-brand-secondary italic font-serif lowercase tracking-normal">next role.</span>
           </motion.h1>
-          <p className="text-sm md:text-base text-white/60 max-w-xl mx-auto leading-relaxed font-sans font-medium">
+          <p className="text-sm md:text-base text-white/60 max-w-xl mx-auto leading-relaxed font-sans font-medium mb-8">
             Join a growing network of professionals stepping into real global opportunities.
           </p>
+          <div className="flex flex-wrap gap-4 justify-center items-center">
+            <a 
+              href="https://linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-transparent hover:bg-brand-secondary text-white hover:text-brand-primary px-6 py-3.5 text-[10px] font-display font-bold tracking-widest uppercase transition-premium border border-white/20 hover:border-brand-secondary cursor-pointer"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              FOLLOW ON LINKEDIN
+            </a>
+            <a 
+              href="https://tiktok.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-transparent hover:bg-brand-secondary text-white hover:text-brand-primary px-6 py-3.5 text-[10px] font-display font-bold tracking-widest uppercase transition-premium border border-white/20 hover:border-brand-secondary cursor-pointer"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.92-1.31 1.83-3.58 2.81-5.78 2.82-2.26-.01-4.55-1.04-5.83-2.91-1.48-2.13-1.65-5.11-.46-7.4 1.11-2.15 3.53-3.61 5.97-3.53.01 1.42-.02 2.85-.01 4.28-1.35-.09-2.79.56-3.41 1.76-.71 1.34-.33 3.12.89 4.05 1.11.85 2.7.83 3.77-.07.9-.76 1.13-1.99 1.11-3.1-.03-3.7-.01-7.4-.02-11.1z" />
+              </svg>
+              FOLLOW ON TIKTOK
+            </a>
+          </div>
         </div>
       </section>
 
@@ -108,53 +132,61 @@ export default function Careers() {
             <h2 className="text-4xl font-display font-black text-brand-primary uppercase">Open Roles</h2>
           </div>
 
-          <div className="border border-sand-border-strong divide-y divide-sand-border bg-white max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl">
             {jobs.map((job, idx) => (
               <motion.div 
                 key={job.id}
-                initial={{ opacity: 0, y: 8 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.04, duration: 0.3 }}
+                transition={{ delay: idx * 0.05, duration: 0.4 }}
                 viewport={{ once: true }}
-                className="group p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-cream/15 transition-all duration-300"
+                className="group bg-white p-8 border border-sand-border-strong relative flex flex-col justify-between hover:border-brand-primary hover:shadow-md transition-premium"
               >
-                <div className="space-y-3">
-                  <div className="flex flex-wrap items-center gap-3">
-                    <h3 className="text-base md:text-lg font-display font-black text-brand-primary tracking-tight transition-colors group-hover:text-brand-secondary duration-300 uppercase">
-                      {job.title}
-                    </h3>
-                    {job.category === 'Active' && (
-                      <span className="border border-emerald-250 text-emerald-800 bg-emerald-50/50 px-2.5 py-0.5 text-[9px] font-display font-bold tracking-wider">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="bg-brand-secondary/5 border border-brand-secondary/20 px-2.5 py-0.5 text-brand-dark font-display font-bold text-[9px] tracking-wider uppercase">
+                      {job.department}
+                    </span>
+                    {job.category === 'Active' ? (
+                      <span className="border border-emerald-200 text-emerald-800 bg-emerald-50/50 px-2.5 py-0.5 text-[9px] font-display font-bold tracking-wider">
                         HIRING NOW
                       </span>
-                    )}
-                    {job.category === 'Benched' && (
+                    ) : (
                       <span className="border border-brand-secondary/35 text-brand-secondary bg-brand-secondary/5 px-2.5 py-0.5 text-[9px] font-display font-bold tracking-wider uppercase">
                         TALENT POOL
                       </span>
                     )}
                   </div>
                   
-                  <div className="flex flex-wrap items-center gap-4 text-[11px] font-semibold text-brand-primary/60">
-                    <span className="bg-brand-secondary/5 border border-brand-secondary/10 px-2 py-0.5 text-brand-dark">
-                      {job.department}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <div>
+                    <h3 className="text-lg md:text-xl font-display font-black text-brand-primary tracking-tight uppercase group-hover:text-brand-secondary transition-colors duration-300">
+                      {job.title}
+                    </h3>
+                  </div>
+                  
+                  <div className="flex flex-wrap items-center gap-4 text-[11px] font-semibold text-brand-primary/60 pt-4 border-t border-sand-border">
+                    <span className="flex items-center gap-1.5">
+                      <svg className="w-3.5 h-3.5 text-brand-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                         <circle cx="12" cy="10" r="3" />
                       </svg>
                       {job.location}
                     </span>
-                    <span className="border border-sand-border px-2 py-0.5 text-brand-primary">
+                    <span className="border border-sand-border px-2 py-0.5 text-brand-primary/70 text-[10px]">
                       {job.type}
                     </span>
                   </div>
                 </div>
-
-                <button className="bg-brand-primary hover:bg-brand-secondary text-white px-5 py-3 text-[11px] font-display font-bold tracking-widest uppercase transition-premium border border-brand-primary hover:border-brand-secondary cursor-pointer">
-                  APPLY NOW
-                </button>
+                
+                <div className="pt-8">
+                  <button className="w-full bg-brand-primary hover:bg-brand-secondary text-white py-3.5 px-6 text-[10px] font-display font-bold tracking-widest uppercase transition-premium border border-brand-primary hover:border-brand-secondary cursor-pointer flex items-center justify-center gap-2 group/btn">
+                    APPLY NOW
+                    <svg className="w-3.5 h-3.5 transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -185,6 +217,9 @@ export default function Careers() {
                   rel="noopener noreferrer"
                   className="bg-brand-secondary hover:bg-white hover:text-brand-secondary text-white px-8 py-4 text-[11px] font-display font-bold tracking-widest uppercase transition-premium border border-brand-secondary flex items-center gap-2"
                 >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M22.05 2.158c-.196-.083-.43-.02-.556.142L.316 11.233c-.237.103-.294.39-.11.564l4.557 3.42c.162.122.387.113.54-.02L18.42 5.82c.085-.078.21-.06.273.04.062.102.015.23-.087.292L7.33 13.9c-.114.07-.184.195-.187.33l-.116 4.793c-.007.29.232.532.523.51.137-.01.265-.067.35-.164l2.79-3.2 4.675 3.513c.18.136.435.093.564-.096l6.666-17.06c.074-.19-.028-.403-.223-.487z" />
+                  </svg>
                   JOIN TELEGRAM
                 </a>
               </div>
