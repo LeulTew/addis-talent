@@ -103,7 +103,7 @@ export default function About() {
             <div className="hidden lg:block lg:col-span-5 relative h-[350px] self-end mt-auto">
               <div className="relative w-full h-[320px] flex items-end justify-center bg-transparent">
                 <FallbackImage 
-                  src="/assets/about-story-photo.png" 
+                  src="/assets/about-story-photo.webp" 
                   alt="MMCY Collaboration" 
                   className="max-w-full max-h-full object-contain object-bottom relative z-10"
                   fallback={<AboutCollaborationSVG />}
@@ -182,7 +182,7 @@ export default function About() {
             >
               <div className="relative w-full h-full overflow-hidden">
                 <FallbackImage 
-                  src="/assets/about-collaboration-habesha.png" 
+                  src="/assets/about-collaboration-habesha.webp" 
                   alt="MMCY Workspace Collaboration Habesha" 
                   className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                   fallback={<AboutCollaborationSVG />}

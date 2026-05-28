@@ -194,7 +194,7 @@ export default function Careers() {
               <div className="w-full max-w-[320px] aspect-square bg-white/[0.03] border border-white/5 p-8 flex flex-col items-center justify-between text-center group hover:bg-brand-secondary/[0.03] hover:border-brand-secondary/35 transition-premium backdrop-blur-xs">
                 <div className="flex flex-col items-center justify-center flex-grow overflow-hidden w-full bg-transparent">
                   <FallbackImage 
-                    src="/assets/path-seeker-side.png" 
+                    src="/assets/path-seeker-side.webp" 
                     alt="Careers page network diagram" 
                     className="max-h-full object-contain"
                     fallback={<TalentNetworkSVG />}

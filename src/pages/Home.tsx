@@ -234,17 +234,17 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
     {
       name: 'Hana Tesfaye',
       role: 'Senior Account Manager',
-      image: '/assets/hana-placed.png'
+      image: '/assets/hana-placed.webp'
     },
     {
       name: 'Yonas Birru',
       role: 'Senior Software Engineer',
-      image: '/assets/yonas-placed.png'
+      image: '/assets/yonas-placed.webp'
     },
     {
       name: 'Selamawit Alene',
       role: 'Operations Specialist',
-      image: '/assets/selam-placed.png'
+      image: '/assets/selam-placed.webp'
     }
   ];
 
@@ -425,7 +425,7 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
                 {/* Team SVG/Image content space aligned flush to bottom */}
                 <div className="relative w-full h-[460px] flex items-end justify-center bg-transparent">
                   <FallbackImage 
-                    src="/assets/hero-team.png" 
+                    src="/assets/hero-team.webp" 
                     alt="Addis Talent Team Illustration" 
                     className="max-w-full max-h-full object-contain object-bottom relative z-10"
                     fallback={<HeroTeamSVG />}
@@ -655,7 +655,7 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
                   {/* Schematic illustration */}
                   <div className="w-full h-32 flex items-center justify-center p-0 mb-8 overflow-hidden bg-transparent">
                     <FallbackImage 
-                      src="/assets/path-employer.png" 
+                      src="/assets/path-employer.webp" 
                       alt="Organizations Path" 
                       className="max-h-full object-contain"
                       fallback={<EmployerPathSVG />}
@@ -700,7 +700,7 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
                   {/* Schematic illustration */}
                   <div className="w-full h-32 flex items-center justify-center p-0 mb-8 overflow-hidden bg-transparent">
                     <FallbackImage 
-                      src="/assets/path-seeker.png" 
+                      src="/assets/path-seeker.webp" 
                       alt="Job Seeker Path" 
                       className="max-h-full object-contain"
                       fallback={<SeekerPathSVG />}
