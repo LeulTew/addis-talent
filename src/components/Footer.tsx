@@ -18,19 +18,18 @@ export default function Footer({ setCurrentPage }: FooterProps) {
               <div className="w-[40px] h-[40px] flex items-center justify-center transition-premium hover:scale-105">
                 <svg className="w-full h-full text-white" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18 2.5 L31.4 10.25 V25.75 L18 33.5 L4.6 25.75 V10.25 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" className="text-white/10" />
-                  <path d="M11 25.5 L18 10 L25 25.5" stroke="#EC684F" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M13.5 20.5 H22.5" stroke="#EC684F" strokeWidth="3" strokeLinecap="round" />
+                  <path d="M11 25.5 L18 10 L25 25.5" stroke="var(--color-brand-secondary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M13.5 20.5 H22.5" stroke="var(--color-brand-secondary)" strokeWidth="3" strokeLinecap="round" />
                   <path d="M10 10 H26" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
                   <path d="M18 10 V23" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
                 </svg>
               </div>
               <div>
                 <h2 className="text-base font-display font-black tracking-widest text-white leading-none">ADDIS TALENT</h2>
-                <p className="text-[8px] uppercase tracking-[0.25em] text-brand-secondary font-bold leading-none mt-1.5">POWERED BY MMCY</p>
               </div>
             </div>
             <p className="text-white/60 text-[13px] leading-relaxed font-sans">
-              Addis Talent is the recruitment, readiness, and placement platform powered by MMCY, created to help talent step into real opportunity.
+              Addis Talent is the recruitment, readiness, and placement platform dedicated to bridging the gap between exceptional professionals and leading organizations.
             </p>
             <div className="flex gap-2.5 pt-2">
               <a 
@@ -140,7 +139,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
         </div>
 
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white/40 text-xs tracking-wider uppercase">© 2026 ADDIS TALENT. POWERED BY MMCY.</p>
+          <p className="text-white/40 text-xs tracking-wider uppercase">© 2026 ADDIS TALENT.</p>
           <div className="flex gap-8 text-[10px] font-bold text-white/40 uppercase tracking-widest">
             <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors duration-300">Terms of Service</a>

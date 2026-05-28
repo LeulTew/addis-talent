@@ -34,37 +34,37 @@ function AboutCollaborationSVG() {
     <svg className="w-full h-full text-brand-primary/30" viewBox="0 0 350 280" fill="none" xmlns="http://www.w3.org/2000/svg">
       <motion.circle 
         cx="175" cy="120" r="60" 
-        stroke="rgba(236, 104, 79, 0.15)" strokeWidth="1.5" strokeDasharray="5 5"
+        stroke="rgba(255, 163, 0, 0.15)" strokeWidth="1.5" strokeDasharray="5 5"
         animate={{ rotate: -360 }}
         transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
       />
       <motion.path 
         d="M30 220 H320" 
-        stroke="#192030" strokeWidth="2.5" strokeLinecap="round"
+        stroke="#141414" strokeWidth="2.5" strokeLinecap="round"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       />
       <g transform="translate(140, 170)">
-        <rect x="0" y="0" width="70" height="42" rx="3" stroke="#192030" strokeWidth="2" fill="#F8F5F0" />
-        <path d="M-10 42 H80" stroke="#192030" strokeWidth="3" strokeLinecap="round" />
-        <path d="M15 10 H55 M15 18 H45 M15 26 H35" stroke="#EC684F" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="0" y="0" width="70" height="42" rx="3" stroke="#141414" strokeWidth="2" fill="#fafafa" />
+        <path d="M-10 42 H80" stroke="#141414" strokeWidth="3" strokeLinecap="round" />
+        <path d="M15 10 H55 M15 18 H45 M15 26 H35" stroke="#ffa300" strokeWidth="1.5" strokeLinecap="round" />
       </g>
       <g transform="translate(60, 130)">
-        <path d="M0 90 C0 60, 30 50, 40 50 C50 50, 80 60, 80 90" stroke="#192030" strokeWidth="2" strokeLinecap="round" />
-        <circle cx="40" cy="25" r="16" stroke="#192030" strokeWidth="2" fill="#F8F5F0" />
-        <path d="M60 70 Q95 55 110 65" stroke="#EC684F" strokeWidth="2" strokeLinecap="round" />
+        <path d="M0 90 C0 60, 30 50, 40 50 C50 50, 80 60, 80 90" stroke="#141414" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="40" cy="25" r="16" stroke="#141414" strokeWidth="2" fill="#fafafa" />
+        <path d="M60 70 Q95 55 110 65" stroke="#ffa300" strokeWidth="2" strokeLinecap="round" />
       </g>
       <g transform="translate(210, 130)">
-        <path d="M0 90 C0 60, 30 50, 40 50 C50 50, 80 60, 80 90" stroke="#192030" strokeWidth="2" strokeLinecap="round" />
-        <circle cx="40" cy="25" r="16" stroke="#192030" strokeWidth="2" fill="#F8F5F0" />
-        <path d="M20 70 Q-10 50 -20 60" stroke="#EC684F" strokeWidth="2" strokeLinecap="round" />
+        <path d="M0 90 C0 60, 30 50, 40 50 C50 50, 80 60, 80 90" stroke="#141414" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="40" cy="25" r="16" stroke="#141414" strokeWidth="2" fill="#fafafa" />
+        <path d="M20 70 Q-10 50 -20 60" stroke="#ffa300" strokeWidth="2" strokeLinecap="round" />
       </g>
       <g transform="translate(175, 45)">
         <motion.path 
           d="M0 -8 L2 -2 L8 -2 L4 2 L6 8 L0 4 L-6 8 L-4 2 L-8 -2 L-2 -2 Z" 
-          fill="#EC684F"
+          fill="#ffa300"
           animate={{ scale: [1, 1.25, 1], opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 3, repeat: Infinity }}
         />
@@ -80,7 +80,7 @@ export default function About() {
       <section className="bg-brand-primary pt-40 pb-0 text-white relative overflow-hidden border-b border-sand-border min-h-[60vh] flex items-center">
         <FloatingBackground />
         <div className="absolute inset-y-0 right-0 w-full lg:w-1/2 overflow-hidden pointer-events-none z-0">
-          <BackgroundPaths className="text-[#EC684F]/10" />
+          <BackgroundPaths className="text-[#ffa300]/10" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -96,7 +96,7 @@ export default function About() {
                 Built to move <br /><span className="text-brand-secondary italic font-serif lowercase tracking-normal">talent forward.</span>
               </motion.h1>
               <p className="text-sm md:text-base text-white/50 max-w-xl leading-relaxed font-sans font-medium">
-                The recruitment, readiness, and placement platform powered by MMCY, created to help talent step into real opportunity.
+                A dedicated recruitment, readiness, and placement platform created to help talent step into real opportunity.
               </p>
             </div>
             {/* Right Column: about-story-photo.png */}
@@ -212,7 +212,7 @@ export default function About() {
               <h2 className="text-4xl font-display font-black text-brand-primary leading-[1.1] tracking-tight uppercase">Built from<br/>real work.</h2>
               <div className="space-y-6 text-brand-primary/70 text-sm leading-relaxed font-sans font-medium">
                 <p>
-                  Addis Talent was built from work that was already happening. Through <span className="text-brand-primary font-bold">MMCY</span>, teams were already sourcing talent, training candidates, assessing fit, and supporting placements.
+                  Addis Talent was built from years of hands-on experience in the recruitment sector. Sourcing talent, training candidates, assessing role fit, and supporting successful placements have always been at the core of our operations.
                 </p>
                 <p>
                   Addis Talent brings that experience into a clearer platform with a stronger identity, a more focused offer, and a sharper path forward.

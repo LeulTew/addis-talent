@@ -10,7 +10,7 @@ export default function HireTalent({ setCurrentPage }: { setCurrentPage: (page: 
     {
       idx: '01',
       title: 'How We Source Talent',
-      desc: "We leverage our deep local networks and MMCY's reach to find high-potential professionals across Ethiopia."
+      desc: "We leverage our deep local networks and our platform's reach to find high-potential professionals across Ethiopia."
     },
     {
       idx: '02',
@@ -35,7 +35,7 @@ export default function HireTalent({ setCurrentPage }: { setCurrentPage: (page: 
       <section className="bg-brand-primary pt-40 pb-28 text-center relative overflow-hidden border-b border-sand-border">
         <FloatingBackground />
         <div className="absolute top-0 right-0 w-full lg:w-1/3 h-full overflow-hidden pointer-events-none z-0">
-          <BackgroundPaths className="text-[#EC684F]/10" />
+          <BackgroundPaths className="text-[#ffa300]/10" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-brand-secondary text-[10px] font-display font-bold uppercase tracking-[0.25em] mb-5">For Organizations</div>

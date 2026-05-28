@@ -6,15 +6,15 @@
   --font-sans: "Plus Jakarta Sans", sans-serif;
   --font-accent: "Syne", sans-serif;
 
-  --color-brand-primary: #192030;      /* Original Blue-Black / Deep Navy */
-  --color-brand-secondary: #EC684F;    /* Original Coral Orange */
-  --color-brand-accent: #F5A08D;       /* Original Peach */
-  --color-brand-dark: #C4422B;         /* Original Dark Red */
-  --color-brand-light: #F8F5F0;        /* Original Cream */
-  --color-cream: #F8F5F0;
+  --color-brand-primary: #141414;      /* Charcoal Black */
+  --color-brand-secondary: #ffa300;    /* Amber Yellow */
+  --color-brand-accent: #ffc24d;       /* Light Amber */
+  --color-brand-dark: #b37200;         /* Dark Amber */
+  --color-brand-light: #fafafa;        /* Clean Off-white */
+  --color-cream: #fafafa;
   
-  --color-sand-border: rgba(25, 32, 48, 0.1); /* Thin crisp navy-sand divider line */
-  --color-sand-border-strong: rgba(25, 32, 48, 0.2);
+  --color-sand-border: rgba(20, 20, 20, 0.08); /* Thin crisp charcoal divider line */
+  --color-sand-border-strong: rgba(20, 20, 20, 0.15);
 }
 
 @layer base {
@@ -25,22 +25,22 @@
 
 /* Custom Utilities outside Tailwind directives to prevent compiler parsing warnings */
 .bg-dot-pattern {
-  background-image: radial-gradient(rgba(25, 32, 48, 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(20, 20, 20, 0.05) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 .bg-grid-pattern {
-  background-image: linear-gradient(rgba(25, 32, 48, 0.04) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(25, 32, 48, 0.04) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(20, 20, 20, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(20, 20, 20, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
 .bg-hero-mesh {
-  background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(236, 104, 79, 0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(255, 163, 0, 0.1) 0%, transparent 70%);
 }
 
 .text-glow {
-  text-shadow: 0 0 30px rgba(236, 104, 79, 0.4);
+  text-shadow: 0 0 30px rgba(255, 163, 0, 0.35);
 }
 
 .grid-card {

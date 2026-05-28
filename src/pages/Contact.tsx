@@ -11,7 +11,7 @@ export default function Contact() {
       <section className="bg-brand-primary pt-40 pb-28 text-center relative overflow-hidden border-b border-sand-border">
         <FloatingBackground />
         <div className="absolute top-0 left-0 w-full lg:w-1/2 h-[280px] overflow-hidden pointer-events-none z-0">
-          <BackgroundPaths className="text-[#EC684F]/10" />
+          <BackgroundPaths className="text-[#ffa300]/10" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-brand-secondary text-[10px] font-display font-bold uppercase tracking-[0.25em] mb-5">Get in Touch</div>
@@ -124,7 +124,7 @@ export default function Contact() {
                   <div className="relative">
                     <select 
                       defaultValue=""
-                      className="w-full bg-cream/10 border border-sand-border rounded-none px-4 py-3.5 text-[14px] font-sans font-semibold focus:border-brand-secondary focus:outline-none transition-all appearance-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTIgOCI+PHBhdGggZD0iTTEgMWw1IDUgNS01IiBzdHJva2U9IiMxOTIwMzAiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+')] bg-no-repeat bg-[right_1.25rem_center] text-brand-primary cursor-pointer"
+                      className="w-full bg-cream/10 border border-sand-border rounded-none px-4 py-3.5 text-[14px] font-sans font-semibold focus:border-brand-secondary focus:outline-none transition-all appearance-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTIgOCI+PHBhdGggZD0iTTEgMWw1IDUgNS01IiBzdHJva2U9IiMxNDE0MTQiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+')] bg-no-repeat bg-[right_1.25rem_center] text-brand-primary cursor-pointer"
                     >
                       <option value="" disabled>Select an option</option>
                       <option>Job Seeker / Talent</option>

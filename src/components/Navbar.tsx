@@ -29,8 +29,8 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
             <div className="w-[38px] h-[38px] flex items-center justify-center transition-premium group-hover:scale-105">
               <svg className="w-full h-full text-white" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 2.5 L31.4 10.25 V25.75 L18 33.5 L4.6 25.75 V10.25 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" className="text-white/10 group-hover:text-brand-secondary/35 transition-colors duration-300" />
-                <path d="M11 25.5 L18 10 L25 25.5" stroke="#EC684F" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M13.5 20.5 H22.5" stroke="#EC684F" strokeWidth="3" strokeLinecap="round" />
+                <path d="M11 25.5 L18 10 L25 25.5" stroke="var(--color-brand-secondary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M13.5 20.5 H22.5" stroke="var(--color-brand-secondary)" strokeWidth="3" strokeLinecap="round" />
                 <path d="M10 10 H26" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
                 <path d="M18 10 V23" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
               </svg>
@@ -39,9 +39,6 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               <h1 className="text-[15px] font-display font-black tracking-widest text-white leading-none group-hover:text-brand-secondary transition-colors duration-300">
                 ADDIS TALENT
               </h1>
-              <p className="text-[8px] uppercase tracking-[0.22em] text-brand-secondary font-bold leading-none mt-1.5">
-                POWERED BY MMCY
-              </p>
             </div>
           </div>
 

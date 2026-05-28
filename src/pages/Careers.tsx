@@ -43,20 +43,20 @@ function TalentNetworkSVG() {
       />
       <motion.path 
         d="M30 40 L100 20 L170 40 L130 95 L70 95 Z" 
-        stroke="#EC684F" strokeWidth="1.5"
+        stroke="#ffa300" strokeWidth="1.5"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 2, delay: 0.3 }}
       />
-      <motion.circle cx="30" cy="40" r="5" fill="#F8F5F0" whileHover={{ scale: 1.5 }} />
-      <motion.circle cx="100" cy="20" r="5" fill="#F8F5F0" whileHover={{ scale: 1.5 }} />
-      <motion.circle cx="170" cy="40" r="5" fill="#F8F5F0" whileHover={{ scale: 1.5 }} />
-      <motion.circle cx="130" cy="95" r="5" fill="#EC684F" whileHover={{ scale: 1.5 }} />
-      <motion.circle cx="70" cy="95" r="5" fill="#EC684F" whileHover={{ scale: 1.5 }} />
-      <motion.circle cx="100" cy="130" r="6" fill="#F8F5F0" whileHover={{ scale: 1.5 }} />
+      <motion.circle cx="30" cy="40" r="5" fill="#fafafa" whileHover={{ scale: 1.5 }} />
+      <motion.circle cx="100" cy="20" r="5" fill="#fafafa" whileHover={{ scale: 1.5 }} />
+      <motion.circle cx="170" cy="40" r="5" fill="#fafafa" whileHover={{ scale: 1.5 }} />
+      <motion.circle cx="130" cy="95" r="5" fill="#ffa300" whileHover={{ scale: 1.5 }} />
+      <motion.circle cx="70" cy="95" r="5" fill="#ffa300" whileHover={{ scale: 1.5 }} />
+      <motion.circle cx="100" cy="130" r="6" fill="#fafafa" whileHover={{ scale: 1.5 }} />
       <motion.circle 
-        cx="100" cy="130" r="12" stroke="rgba(236, 104, 79, 0.4)" strokeWidth="1"
+        cx="100" cy="130" r="12" stroke="rgba(255, 163, 0, 0.4)" strokeWidth="1"
         animate={{ scale: [1, 1.8, 1], opacity: [0.8, 0, 0.8] }}
         transition={{ duration: 3, repeat: Infinity }}
       />
@@ -69,7 +69,7 @@ export default function Careers() {
     { id: '1', title: 'Customer Support Associate', department: 'BPO', location: 'Addis Ababa / Remote', type: 'Full-Time', category: 'Benched' },
     { id: '2', title: 'Sales Professional', department: 'Sales', location: 'Bole Hub', type: 'Contract', category: 'Active' },
     { id: '3', title: 'Business Development Rep', department: 'Business', location: 'Remote', type: 'Full-Time', category: 'Benched' },
-    { id: '4', title: 'Operations Assistant', department: 'Support', location: 'MMCY Building', type: 'Full-Time', category: 'Support' },
+    { id: '4', title: 'Operations Assistant', department: 'Support', location: 'Bole Central', type: 'Full-Time', category: 'Support' },
   ];
 
   return (
@@ -78,7 +78,7 @@ export default function Careers() {
       <section className="bg-brand-primary pt-40 pb-28 text-center relative overflow-hidden border-b border-sand-border">
         <FloatingBackground />
         <div className="absolute top-0 right-0 w-full lg:w-1/2 h-[300px] overflow-hidden pointer-events-none z-0">
-          <BackgroundPaths className="text-[#EC684F]/10" />
+          <BackgroundPaths className="text-[#ffa300]/10" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-brand-secondary text-[10px] font-display font-bold uppercase tracking-[0.25em] mb-5">Open Positions</div>
@@ -180,7 +180,7 @@ export default function Careers() {
                   SUBMIT YOUR CV
                 </button>
                 <a 
-                  href="https://t.me/MMCYJobs"
+                  href="https://t.me/AddisTalentJobs"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-brand-secondary hover:bg-white hover:text-brand-secondary text-white px-8 py-4 text-[11px] font-display font-bold tracking-widest uppercase transition-premium border border-brand-secondary flex items-center gap-2"

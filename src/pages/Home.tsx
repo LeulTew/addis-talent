@@ -86,7 +86,7 @@ function HeroTeamSVG() {
       />
       <motion.circle 
         cx="200" cy="150" r="80" 
-        stroke="rgba(251, 160, 141, 0.15)" strokeWidth="1.5" strokeDasharray="6 3"
+        stroke="rgba(255, 163, 0, 0.15)" strokeWidth="1.5" strokeDasharray="6 3"
         animate={{ rotate: 360 }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
       />
@@ -95,45 +95,45 @@ function HeroTeamSVG() {
       <g transform="translate(100, 90)">
         <motion.circle 
           cx="0" cy="0" r="30" 
-          fill="#192030" stroke="#EC684F" strokeWidth="2"
+          fill="#141414" stroke="#ffa300" strokeWidth="2"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", delay: 0.2 }}
         />
-        <path d="M-10 10 C-10 0, 10 0, 10 10 M0 -10 A6 6 0 1 0 0 -2" stroke="#F8F5F0" strokeWidth="2" strokeLinecap="round" />
-        <path d="M-16 -5 L-21 0 L-16 5 M16 -5 L21 0 L16 5" stroke="#EC684F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M-10 10 C-10 0, 10 0, 10 10 M0 -10 A6 6 0 1 0 0 -2" stroke="#fafafa" strokeWidth="2" strokeLinecap="round" />
+        <path d="M-16 -5 L-21 0 L-16 5 M16 -5 L21 0 L16 5" stroke="#ffa300" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </g>
 
       {/* Node 2: Support Specialist */}
       <g transform="translate(300, 110)">
         <motion.circle 
           cx="0" cy="0" r="34" 
-          fill="#192030" stroke="#F5A08D" strokeWidth="2"
+          fill="#141414" stroke="#ffc24d" strokeWidth="2"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", delay: 0.4 }}
         />
-        <path d="M-12 12 C-12 2, 12 2, 12 12 M0 -8 A7 7 0 1 0 0 6" stroke="#F8F5F0" strokeWidth="2" strokeLinecap="round" />
-        <path d="M-8 -2 A8 8 0 0 1 8 -2 V4 M8 4 H10 M-8 4 H-10" stroke="#EC684F" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M-12 12 C-12 2, 12 2, 12 12 M0 -8 A7 7 0 1 0 0 6" stroke="#fafafa" strokeWidth="2" strokeLinecap="round" />
+        <path d="M-8 -2 A8 8 0 0 1 8 -2 V4 M8 4 H10 M-8 4 H-10" stroke="#ffa300" strokeWidth="1.5" strokeLinecap="round" />
       </g>
 
       {/* Node 3: Business Strategist */}
       <g transform="translate(200, 210)">
         <motion.circle 
           cx="0" cy="0" r="36" 
-          fill="#192030" stroke="#EC684F" strokeWidth="2"
+          fill="#141414" stroke="#ffa300" strokeWidth="2"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", delay: 0.6 }}
         />
-        <path d="M-14 14 C-14 3, 14 3, 14 14 M0 -8 A8 8 0 1 0 0 8" stroke="#F8F5F0" strokeWidth="2" strokeLinecap="round" />
-        <path d="M-6 0 L-2 4 L6 -4" stroke="#F5A08D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M-14 14 C-14 3, 14 3, 14 14 M0 -8 A8 8 0 1 0 0 8" stroke="#fafafa" strokeWidth="2" strokeLinecap="round" />
+        <path d="M-6 0 L-2 4 L6 -4" stroke="#ffc24d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </g>
 
       {/* Connections */}
       <motion.path 
         d="M130 90 L266 110 M100 120 L164 210 M300 144 L236 210" 
-        stroke="#EC684F" strokeWidth="1.5" strokeLinecap="round"
+        stroke="#ffa300" strokeWidth="1.5" strokeLinecap="round"
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
         transition={{ duration: 1.5, delay: 0.8 }}
@@ -171,20 +171,20 @@ function EmployerPathSVG() {
       />
       <motion.path 
         d="M50 60 L105 60 M195 60 L250 60 M150 15 L150 35 M150 85 L150 105" 
-        stroke="#EC684F" strokeWidth="2" strokeLinecap="round"
+        stroke="#ffa300" strokeWidth="2" strokeLinecap="round"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.5 }}
       />
-      <circle cx="50" cy="60" r="4" fill="#EC684F" />
-      <circle cx="250" cy="60" r="4" fill="#EC684F" />
-      <circle cx="150" cy="15" r="4" fill="#EC684F" />
-      <circle cx="150" cy="105" r="4" fill="#EC684F" />
+      <circle cx="50" cy="60" r="4" fill="#ffa300" />
+      <circle cx="250" cy="60" r="4" fill="#ffa300" />
+      <circle cx="150" cy="15" r="4" fill="#ffa300" />
+      <circle cx="150" cy="105" r="4" fill="#ffa300" />
       <g transform="translate(150, 60)">
         <motion.circle 
           cx="0" cy="0" r="8" 
-          stroke="#F8F5F0" strokeWidth="2"
+          stroke="#fafafa" strokeWidth="2"
           animate={{ scale: [1, 1.15, 1] }}
           transition={{ duration: 3, repeat: Infinity }}
         />
@@ -198,7 +198,7 @@ function SeekerPathSVG() {
     <svg className="w-full h-full text-brand-primary/40" viewBox="0 0 300 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <motion.path 
         d="M40 100 H90 V75 H140 V50 H190 V25 H240" 
-        stroke="#192030" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+        stroke="#141414" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true }}
@@ -206,7 +206,7 @@ function SeekerPathSVG() {
       />
       <motion.path 
         d="M50 85 L215 15" 
-        stroke="#EC684F" strokeWidth="1.5" strokeDasharray="4 4"
+        stroke="#ffa300" strokeWidth="1.5" strokeDasharray="4 4"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true }}
@@ -215,16 +215,16 @@ function SeekerPathSVG() {
       <g transform="translate(240, 25)">
         <motion.path 
           d="M0 -10 L3 -3 L10 -3 L5 2 L7 9 L0 5 L-7 9 L-5 2 L-10 -3 L-3 -3 Z" 
-          fill="#EC684F"
+          fill="#ffa300"
           initial={{ scale: 0, rotate: -45 }}
           whileInView={{ scale: 1, rotate: 0 }}
           viewport={{ once: true }}
           transition={{ type: "spring", delay: 1 }}
         />
       </g>
-      <circle cx="90" cy="75" r="3" fill="#EC684F" />
-      <circle cx="140" cy="50" r="3" fill="#EC684F" />
-      <circle cx="190" cy="25" r="3" fill="#EC684F" />
+      <circle cx="90" cy="75" r="3" fill="#ffa300" />
+      <circle cx="140" cy="50" r="3" fill="#ffa300" />
+      <circle cx="190" cy="25" r="3" fill="#ffa300" />
     </svg>
   );
 }
@@ -321,7 +321,7 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
 
         <FloatingBackground />
         <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 overflow-hidden pointer-events-none z-0">
-          <BackgroundPaths className="text-[#EC684F]/15" />
+          <BackgroundPaths className="text-[#ffa300]/15" />
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-10 pb-0">
@@ -383,7 +383,7 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-sm md:text-[15px] text-white/70 mb-10 max-w-lg leading-relaxed font-sans font-medium"
               >
-                Addis Talent is the recruitment, readiness, and placement platform powered by <strong className="text-white font-bold">MMCY</strong>, connecting Ethiopian professionals to real opportunities worldwide.
+                Addis Talent is a dedicated recruitment, talent readiness, and placement platform connecting exceptional Ethiopian professionals to global opportunities.
               </motion.p>
               
               <motion.div 
@@ -523,7 +523,7 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
             Built through real delivery and market demand
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 hover:opacity-95 transition-opacity duration-300">
-            {['MMCY', 'GLOBAL HUB', 'TECH ADDIS', 'ETHIO VENTURES', 'BEYOND'].map((name) => (
+            {['GLOBAL HUB', 'TECH ADDIS', 'ETHIO VENTURES', 'BEYOND', 'PARTNERS'].map((name) => (
               <span key={name} className="text-base font-display font-black tracking-[0.18em] text-white">
                 {name}
               </span>
@@ -601,7 +601,7 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
                 };
 
                 return [
-                  { num: '01', tag: 'Source', title: 'Deep Local Networks', desc: "We leverage MMCY's reach to find high-potential professionals across Ethiopia who are ready to grow." },
+                  { num: '01', tag: 'Source', title: 'Deep Local Networks', desc: "We leverage our deep local networks to find high-potential professionals across Ethiopia who are ready to grow." },
                   { num: '02', tag: 'Assess', title: 'Rigorous Evaluation', desc: "Every candidate undergoes assessment of communication, technical capability, and cultural fit." },
                   { num: '03', tag: 'Train', title: 'Structured Readiness', desc: "We provide coaching and readiness support to ensure talent meets global standards before placement." },
                   { num: '04', tag: 'Place', title: 'Fast Placement', desc: "A bench of ready-to-deploy professionals means quick turnaround for our clients' hiring needs." }
