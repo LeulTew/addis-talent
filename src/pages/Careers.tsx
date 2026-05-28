@@ -90,25 +90,9 @@ export default function Careers() {
           >
             Find your <br /><span className="text-brand-secondary italic font-serif lowercase tracking-normal">next role.</span>
           </motion.h1>
-          <p className="text-sm md:text-base text-white/60 max-w-xl mx-auto leading-relaxed font-sans font-medium mb-8">
+          <p className="text-sm md:text-base text-white/60 max-w-xl mx-auto leading-relaxed font-sans font-medium">
             Join a growing network of professionals stepping into real global opportunities.
           </p>
-          <div className="flex justify-center flex-wrap gap-4">
-            <a 
-              href="https://linkedin.com/company/addistalent" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-transparent hover:bg-white/10 text-white border border-white px-6 py-3 text-[11px] tracking-widest font-display font-bold uppercase transition-premium cursor-pointer flex items-center gap-2"
-            >
-              FOLLOW ON LINKEDIN
-            </a>
-            <a 
-              href="#" 
-              className="bg-transparent hover:bg-white/10 text-white border border-white px-6 py-3 text-[11px] tracking-widest font-display font-bold uppercase transition-premium cursor-pointer flex items-center gap-2"
-            >
-              FOLLOW ON TIKTOK
-            </a>
-          </div>
         </div>
       </section>
 
@@ -124,23 +108,23 @@ export default function Careers() {
             <h2 className="text-4xl font-display font-black text-brand-primary uppercase">Open Roles</h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 max-w-5xl">
+          <div className="border border-sand-border-strong divide-y divide-sand-border bg-white max-w-5xl">
             {jobs.map((job, idx) => (
               <motion.div 
                 key={job.id}
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.04, duration: 0.35 }}
+                transition={{ delay: idx * 0.04, duration: 0.3 }}
                 viewport={{ once: true }}
-                className="group bg-white p-6 md:p-8 border border-sand-border-strong hover:border-brand-primary shadow-xs hover:shadow-md transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-6"
+                className="group p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-cream/15 transition-all duration-300"
               >
-                <div className="space-y-3.5">
+                <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-3">
                     <h3 className="text-base md:text-lg font-display font-black text-brand-primary tracking-tight transition-colors group-hover:text-brand-secondary duration-300 uppercase">
                       {job.title}
                     </h3>
                     {job.category === 'Active' && (
-                      <span className="border border-emerald-200 text-emerald-800 bg-emerald-50 px-2.5 py-0.5 text-[9px] font-display font-bold tracking-wider uppercase">
+                      <span className="border border-emerald-250 text-emerald-800 bg-emerald-50/50 px-2.5 py-0.5 text-[9px] font-display font-bold tracking-wider">
                         HIRING NOW
                       </span>
                     )}
@@ -149,33 +133,27 @@ export default function Careers() {
                         TALENT POOL
                       </span>
                     )}
-                    {job.category === 'Support' && (
-                      <span className="border border-sand-border text-brand-primary/60 bg-brand-light px-2.5 py-0.5 text-[9px] font-display font-bold tracking-wider uppercase">
-                        SUPPORT ROLE
-                      </span>
-                    )}
                   </div>
                   
                   <div className="flex flex-wrap items-center gap-4 text-[11px] font-semibold text-brand-primary/60">
-                    <span className="bg-brand-secondary/5 border border-brand-secondary/10 px-2 py-0.5 text-brand-dark uppercase tracking-wider">
+                    <span className="bg-brand-secondary/5 border border-brand-secondary/10 px-2 py-0.5 text-brand-dark">
                       {job.department}
                     </span>
                     <span className="flex items-center gap-1">
-                      <svg className="w-3.5 h-3.5 text-brand-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                         <circle cx="12" cy="10" r="3" />
                       </svg>
                       {job.location}
                     </span>
-                    <span className="border border-sand-border px-2 py-0.5 text-brand-primary uppercase text-[10px]">
+                    <span className="border border-sand-border px-2 py-0.5 text-brand-primary">
                       {job.type}
                     </span>
                   </div>
                 </div>
 
-                <button className="bg-brand-primary hover:bg-brand-secondary text-white px-6 py-3.5 text-[11px] font-display font-bold tracking-widest uppercase transition-premium border border-brand-primary hover:border-brand-secondary cursor-pointer flex items-center gap-1.5 shrink-0 self-start md:self-auto">
+                <button className="bg-brand-primary hover:bg-brand-secondary text-white px-5 py-3 text-[11px] font-display font-bold tracking-widest uppercase transition-premium border border-brand-primary hover:border-brand-secondary cursor-pointer">
                   APPLY NOW
-                  <span className="text-[12px] font-sans font-light leading-none">↗</span>
                 </button>
               </motion.div>
             ))}
@@ -207,9 +185,6 @@ export default function Careers() {
                   rel="noopener noreferrer"
                   className="bg-brand-secondary hover:bg-white hover:text-brand-secondary text-white px-8 py-4 text-[11px] font-display font-bold tracking-widest uppercase transition-premium border border-brand-secondary flex items-center gap-2"
                 >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.22 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.577.191l-8.536 7.705-.33 4.955c.488 0 .702-.223.974-.488l2.338-2.27 4.861 3.59c.896.495 1.543.24 1.768-.83l3.19-15.03c.326-1.31-.502-1.905-1.36-.147z" />
-                  </svg>
                   JOIN TELEGRAM
                 </a>
               </div>

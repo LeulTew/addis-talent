@@ -153,8 +153,8 @@ export default function About() {
               <div className="relative z-10">
                 <div className="w-12 h-12 border border-white/10 flex items-center justify-center mb-8 text-brand-secondary">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                    <polyline points="17 6 23 6 23 12" />
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                    <circle cx="12" cy="12" r="3" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-display font-black text-white mb-4 tracking-tight uppercase">Our Vision</h3>
@@ -172,6 +172,37 @@ export default function About() {
         <SectionDecoration />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            {/* Visual placeholder box */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="lg:col-span-6 relative aspect-[4/5] sm:aspect-[16/11] lg:aspect-[4/5] bg-white border border-sand-border-strong rounded-2xl overflow-hidden group flex flex-col justify-between"
+            >
+              <div className="relative w-full h-full overflow-hidden">
+                <FallbackImage 
+                  src="/assets/about-collaboration-habesha.webp" 
+                  alt="MMCY Workspace Collaboration Habesha" 
+                  className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                  fallback={<AboutCollaborationSVG />}
+                />
+              </div>
+              
+              <div className="absolute bottom-6 right-6 bg-white border border-sand-border-strong p-6 flex items-center justify-between min-w-[200px] rounded-xl shadow-xs z-10">
+                <div>
+                  <h4 className="font-accent font-black text-2xl tracking-tight text-brand-primary">8+ Years</h4>
+                  <p className="text-brand-primary/45 font-bold tracking-widest uppercase mt-0.5">Operational Excellence</p>
+                </div>
+                <div className="w-8 h-8 border border-sand-border flex items-center justify-center text-brand-secondary rounded-lg">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v4l3 3" />
+                  </svg>
+                </div>
+              </div>
+            </motion.div>
+            
             {/* Story text */}
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-3 text-brand-secondary text-[10px] font-display font-bold uppercase tracking-[0.25em] mb-2">
@@ -181,38 +212,16 @@ export default function About() {
               <h2 className="text-4xl font-display font-black text-brand-primary leading-[1.1] tracking-tight uppercase">Built from<br/>real work.</h2>
               <div className="space-y-6 text-brand-primary/70 text-sm leading-relaxed font-sans font-medium">
                 <p>
-                  Addis Talent was built from work that was already happening. Sourcing talent, training candidates, assessing fit, and supporting placements across different roles and industries have always been at the core of our operations.
+                  Addis Talent was built from years of hands-on experience in the recruitment sector. Sourcing talent, training candidates, assessing role fit, and supporting successful placements have always been at the core of our operations.
                 </p>
                 <p>
-                  Addis Talent brings that experience into a clearer platform with a stronger identity, a more focused offer, and a sharper path forward. What began as capability is now becoming a brand, a service model, and a growing talent platform.
+                  Addis Talent brings that experience into a clearer platform with a stronger identity, a more focused offer, and a sharper path forward.
+                </p>
+                <p className="italic text-brand-secondary font-bold text-base border-l-2 border-brand-secondary pl-4 py-1">
+                  There is no shortage of potential. The real gap is readiness, access, and connection.
                 </p>
               </div>
             </div>
-
-            {/* Why Addis Talent Exists */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="lg:col-span-6 bg-brand-primary p-10 lg:p-12 text-white relative overflow-hidden group flex flex-col justify-between border border-brand-primary min-h-[350px]"
-            >
-              <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
-              <div className="relative z-10 space-y-6 flex-grow flex flex-col justify-between">
-                <div>
-                  <span className="text-[9px] font-display font-black text-brand-secondary tracking-[0.25em] uppercase mb-4 inline-block">PHILOSOPHY</span>
-                  <h3 className="text-2xl font-display font-black text-white mb-6 uppercase tracking-tight">Why Addis Talent Exists</h3>
-                  <p className="text-white/60 text-[13px] leading-relaxed font-sans font-medium mb-8">
-                    There is no shortage of potential. The real gap is readiness, access, and connection. Employers need people who are screened, prepared, and ready to contribute. Talent needs structured pathways into real work.
-                  </p>
-                </div>
-                <div className="border-t border-white/10 pt-6">
-                  <p className="text-[10px] font-display font-black uppercase tracking-[0.3em] text-brand-secondary">
-                    Addis Talent exists to help close that gap.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
