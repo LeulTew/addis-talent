@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useInView, useMotionValue, useSpring, AnimatePresence } from 'framer-motion';
 import PageContainer from '../components/PageContainer';
 import { Page } from '../types';
 import { FloatingBackground, SectionDecoration } from '../components/DecorativeElements';
@@ -230,6 +230,33 @@ function SeekerPathSVG() {
 }
 
 export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) => void }) {
+  const candidates = [
+    {
+      name: 'Hana Tesfaye',
+      role: 'Senior Account Manager',
+      image: '/assets/hana-placed.png'
+    },
+    {
+      name: 'Yonas Birru',
+      role: 'Senior Software Engineer',
+      image: '/assets/yonas-placed.png'
+    },
+    {
+      name: 'Selamawit Alene',
+      role: 'Operations Specialist',
+      image: '/assets/selam-placed.png'
+    }
+  ];
+
+  const [currentIdx, setCurrentIdx] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIdx((prev) => (prev + 1) % candidates.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
+
   const stats = [
     { 
       label: 'Years in Service', 
@@ -410,35 +437,48 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6, duration: 0.5 }}
-                  className="absolute bottom-6 -left-6 bg-white text-brand-primary p-5 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-sand-border flex items-center gap-4.5 w-[300px] z-20"
+                  className="absolute bottom-6 -left-6 bg-white text-brand-primary p-5 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-sand-border flex items-center gap-4.5 w-[310px] z-20 overflow-hidden"
                 >
-                  <div className="w-13 h-13 rounded-xl overflow-hidden shrink-0 bg-brand-light border border-sand-border/30">
-                    <FallbackImage 
-                      src="/assets/hana-placed.png" 
-                      alt="Hana Tesfaye Portrait" 
-                      className="w-full h-full object-cover"
-                      fallback={
-                        <svg className="w-full h-full text-brand-primary/20 p-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                          <circle cx="12" cy="7" r="4" />
-                        </svg>
-                      }
-                    />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-display font-black text-brand-secondary tracking-widest uppercase block leading-none">Recently Placed</span>
-                    <h3 className="text-base font-display font-black text-brand-primary mt-2 leading-none">Hana Tesfaye</h3>
-                    <p className="text-xs text-brand-primary/55 font-sans font-bold tracking-wide mt-1.5 leading-none">Senior Account Manager</p>
-                    
-                    {/* Dots indicator */}
-                    <div className="flex gap-1.5 mt-3">
-                      <span className="w-2 h-2 rounded-full bg-brand-secondary" />
-                      <span className="w-2 h-2 rounded-full bg-brand-secondary" />
-                      <span className="w-2 h-2 rounded-full bg-brand-secondary" />
-                      <span className="w-2 h-2 rounded-full bg-brand-primary/15" />
-                      <span className="w-2 h-2 rounded-full bg-brand-primary/15" />
-                    </div>
-                  </div>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentIdx}
+                      initial={{ opacity: 0, x: 8 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -8 }}
+                      transition={{ duration: 0.25 }}
+                      className="flex items-center gap-4.5 w-full"
+                    >
+                      <div className="w-13 h-13 rounded-xl overflow-hidden shrink-0 bg-brand-light border border-sand-border/30">
+                        <FallbackImage 
+                          src={candidates[currentIdx].image} 
+                          alt={`${candidates[currentIdx].name} Portrait`} 
+                          className="w-full h-full object-cover"
+                          fallback={
+                            <div className="w-full h-full flex items-center justify-center bg-brand-secondary/10 text-brand-secondary font-display font-black text-sm">
+                              {candidates[currentIdx].name.split(' ').map(n => n[0]).join('')}
+                            </div>
+                          }
+                        />
+                      </div>
+                      <div className="flex-grow">
+                        <span className="text-[9px] font-display font-black text-brand-secondary tracking-widest uppercase block leading-none">Recently Placed</span>
+                        <h3 className="text-[14px] font-display font-black text-brand-primary mt-2.5 leading-none whitespace-nowrap">{candidates[currentIdx].name}</h3>
+                        <p className="text-[11px] text-brand-primary/55 font-sans font-bold tracking-wide mt-1.5 leading-none whitespace-nowrap">{candidates[currentIdx].role}</p>
+                        
+                        {/* Dots indicator */}
+                        <div className="flex gap-1.5 mt-3">
+                          {candidates.map((_, dotIdx) => (
+                            <span 
+                              key={dotIdx} 
+                              className={`h-1.5 rounded-full transition-all duration-300 ${
+                                dotIdx === currentIdx ? 'bg-brand-secondary w-3.5' : 'bg-brand-primary/15 w-1.5'
+                              }`} 
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
                 </motion.div>
               </motion.div>
             </div>
