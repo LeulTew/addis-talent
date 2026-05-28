@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --color-brand-primary: #192030;      /* Original Blue-Black / Deep Navy */
+  --color-brand-secondary: #EC684F;    /* Original Coral Orange */
+  --color-brand-accent: #F5A08D;       /* Original Peach */
+  --color-brand-dark: #C4422B;         /* Original Dark Red */
+  --color-brand-light: #F8F5F0;        /* Original Cream */
+  --color-cream: #F8F5F0;
+  
+  --color-sand-border: rgba(25, 32, 48, 0.1); /* Thin crisp navy-sand divider line */
+  --color-sand-border-strong: rgba(25, 32, 48, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-brand-primary font-sans antialiased selection:bg-brand-secondary/20 selection:text-brand-dark;
+  }
+}
+
+/* Custom Utilities outside Tailwind directives to prevent compiler parsing warnings */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(25, 32, 48, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(rgba(25, 32, 48, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(25, 32, 48, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-hero-mesh {
+  background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(236, 104, 79, 0.12) 0%, transparent 70%);
+}
+
+.text-glow {
+  text-shadow: 0 0 30px rgba(236, 104, 79, 0.4);
+}
+
+.grid-card {
+  @apply bg-white border border-sand-border shadow-xs hover:border-brand-primary/20 transition-all duration-300;
+}
+
+.grid-card-interactive {
+  @apply bg-white border border-sand-border hover:border-brand-primary hover:shadow-xs transition-all duration-350;
+}
+
+.btn-editorial {
+  @apply inline-flex items-center gap-2 border-b-2 border-brand-secondary pb-1 text-sm font-bold tracking-wider uppercase hover:text-brand-secondary transition-colors duration-300;
+}
+
+.transition-premium {
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
