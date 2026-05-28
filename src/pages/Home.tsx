@@ -352,40 +352,62 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
               
               <h1 className="text-5xl md:text-7xl font-display font-black text-white mb-8 leading-[1.05] tracking-tight uppercase">
                 <span className="block">
-                  {"GLOBAL WORK.".split("").map((letter, idx) => (
-                    <motion.span
-                      key={`h1-1-${idx}`}
-                      initial={{ y: 25, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ 
-                        delay: idx * 0.03, 
-                        type: "spring",
-                        stiffness: 150,
-                        damping: 25,
-                      }}
-                      className="inline-block"
-                    >
-                      {letter === " " ? "\u00A0" : letter}
-                    </motion.span>
-                  ))}
+                  {["GLOBAL", "WORK."].map((word, wIdx) => {
+                    const startIdx = wIdx === 0 ? 0 : 7;
+                    return (
+                      <span key={`w1-${wIdx}`} className="inline-block whitespace-nowrap">
+                        {word.split("").map((letter, idx) => {
+                          const globalIdx = startIdx + idx;
+                          return (
+                            <motion.span
+                              key={`h1-1-${globalIdx}`}
+                              initial={{ y: 25, opacity: 0 }}
+                              animate={{ y: 0, opacity: 1 }}
+                              transition={{ 
+                                delay: globalIdx * 0.03, 
+                                type: "spring",
+                                stiffness: 150,
+                                damping: 25,
+                              }}
+                              className="inline-block"
+                            >
+                              {letter}
+                            </motion.span>
+                          );
+                        })}
+                        {wIdx === 0 && "\u00A0"}
+                      </span>
+                    );
+                  })}
                 </span>
                 <span className="block text-brand-secondary">
-                  {"local talent.".split("").map((letter, idx) => (
-                    <motion.span
-                      key={`h1-2-${idx}`}
-                      initial={{ y: 25, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ 
-                        delay: 0.35 + idx * 0.03, 
-                        type: "spring",
-                        stiffness: 150,
-                        damping: 25,
-                      }}
-                      className="inline-block"
-                    >
-                      {letter === " " ? "\u00A0" : letter}
-                    </motion.span>
-                  ))}
+                  {["local", "talent."].map((word, wIdx) => {
+                    const startIdx = wIdx === 0 ? 0 : 6;
+                    return (
+                      <span key={`w2-${wIdx}`} className="inline-block whitespace-nowrap">
+                        {word.split("").map((letter, idx) => {
+                          const globalIdx = startIdx + idx;
+                          return (
+                            <motion.span
+                              key={`h1-2-${globalIdx}`}
+                              initial={{ y: 25, opacity: 0 }}
+                              animate={{ y: 0, opacity: 1 }}
+                              transition={{ 
+                                delay: 0.35 + globalIdx * 0.03, 
+                                type: "spring",
+                                stiffness: 150,
+                                damping: 25,
+                              }}
+                              className="inline-block"
+                            >
+                              {letter}
+                            </motion.span>
+                          );
+                        })}
+                        {wIdx === 0 && "\u00A0"}
+                      </span>
+                    );
+                  })}
                 </span>
               </h1>
               
@@ -651,9 +673,15 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
           <div className="text-center mb-20">
             <div className="inline-flex justify-center items-center gap-3 text-brand-secondary text-[10px] font-display font-bold uppercase tracking-[0.25em] mb-4">
               <div className="w-6 h-0.5 bg-brand-secondary" />
-              Two Paths
+              Focus Areas
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-black text-brand-primary uppercase">Who are you?</h2>
+            <h2 className="text-4xl md:text-6xl font-display font-black text-brand-primary leading-none uppercase mb-6">
+              Built for <span className="text-brand-secondary">Employers.</span> <br className="sm:hidden" />
+              Built for <span className="text-brand-secondary">Talent.</span>
+            </h2>
+            <p className="text-xs md:text-sm text-brand-primary/60 font-sans font-bold uppercase tracking-wider max-w-2xl mx-auto">
+              We work with employers looking for reliability, and talent looking for pathways.
+            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -747,6 +775,57 @@ export default function Home({ setCurrentPage }: { setCurrentPage: (page: Page) 
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Interactive Path CTAs from reference homepage */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[480px]">
+        {/* Employers CTA */}
+        <div 
+          onClick={() => setCurrentPage('hire')}
+          className="group relative bg-brand-secondary flex flex-col justify-center items-center overflow-hidden p-12 md:p-20 text-center cursor-pointer transition-all duration-500 rounded-none border-b lg:border-b-0 lg:border-r border-brand-primary/10"
+        >
+          <div className="z-10 max-w-sm relative">
+            <h3 className="text-3xl md:text-5xl font-display font-black text-brand-primary uppercase mb-6 transform group-hover:-translate-y-2 transition-transform duration-700 leading-tight italic tracking-tighter">
+              NEED TALENT THAT'S READY?
+            </h3>
+            <p className="text-brand-primary/80 font-sans font-bold uppercase tracking-wider mb-8 text-xs md:text-sm leading-relaxed">
+              Access professionals who are screened, prepared, and aligned to your needs.
+            </p>
+            <div className="inline-flex items-center gap-4 font-display font-black uppercase tracking-[0.25em] text-brand-primary border-b-2 border-brand-primary pb-2 text-[10px] italic group-hover:gap-6 transition-all duration-300">
+              HIRE TALENT
+              <svg className="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+          {/* Angled background shape with hover transition */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-black/5 -rotate-45 translate-x-16 -translate-y-16 transition-all duration-1000 ease-out group-hover:scale-115 group-hover:-translate-x-8 group-hover:-translate-y-8 pointer-events-none" />
+        </div>
+
+        {/* Talent CTA */}
+        <div 
+          onClick={() => setCurrentPage('careers')}
+          className="group relative bg-brand-primary flex flex-col justify-center items-center overflow-hidden p-12 md:p-20 text-center cursor-pointer transition-all duration-500 rounded-none"
+        >
+          <div className="z-10 max-w-sm relative">
+            <h3 className="text-3xl md:text-5xl font-display font-black text-white uppercase mb-6 transform group-hover:-translate-y-2 transition-transform duration-700 leading-tight italic tracking-tighter">
+              START YOUR GLOBAL CAREER.
+            </h3>
+            <p className="text-white/60 font-sans font-bold uppercase tracking-wider mb-8 text-xs md:text-sm leading-relaxed">
+              Explore openings and join a talent network built around real work and real possibility.
+            </p>
+            <div className="inline-flex items-center gap-4 font-display font-black uppercase tracking-[0.25em] text-brand-secondary border-b-2 border-brand-secondary pb-2 text-[10px] italic group-hover:gap-6 transition-all duration-300">
+              EXPLORE CAREERS
+              <svg className="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+          {/* Angled background shape with hover transition */}
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-secondary/5 rotate-45 -translate-x-16 translate-y-16 transition-all duration-1000 ease-out group-hover:scale-115 group-hover:translate-x-8 group-hover:translate-y-8 pointer-events-none" />
         </div>
       </section>
 
